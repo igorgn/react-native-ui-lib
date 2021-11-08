@@ -13,6 +13,8 @@ steps:
     - "npm run test"
     - "npm run build"
     key: 'main_build'
+    agents:
+      queue: testing
     
   - label: ":shipit: Publish"
     depends_on: 'main_build'
@@ -22,3 +24,5 @@ steps:
     - "npm run bkRelease"
     - "npm run demo"
     if: "build.pull_request.id == null"
+    agents:
+        queue: testing
