@@ -22,6 +22,7 @@ steps:
     command:
     - "nvm install"
     - "npm install"
+    - "echo $GIT_TOKEN"
     - "exit 1"
     - "npm run bkRelease"
     - "npm run demo"
