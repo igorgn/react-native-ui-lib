@@ -8,11 +8,10 @@ steps:
   
   - label: ":hammer_and_pick: Build"
     command:
-    - "echo build"
-    # - "nvm install"
-    # - "npm install"
-    # - "npm run test"
-    # - "npm run build"
+    - "nvm install"
+    - "npm install"
+    - "npm run test"
+    - "npm run build"
     key: 'main_build'
     agents:
       queue: testing
